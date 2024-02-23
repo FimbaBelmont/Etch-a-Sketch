@@ -9,10 +9,11 @@ but.textContent = "Create";
 num.setAttribute("placeholder","Enter a cube size");
 num.setAttribute("type", "number");
 but.addEventListener("click", () =>{
+    let container = document.querySelector("#container");
+    container.textContent = "";
     if (num.value > 0) {
         c = num.value;
         r = num.value;
-    let container = document.querySelector("#container");
     for (i=0; i<c; i++) {
     const column = document.createElement("div");
     column.classList.add("column");
